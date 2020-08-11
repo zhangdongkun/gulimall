@@ -1,0 +1,27 @@
+server:
+  port: 8016
+  servlet:
+    context-path: /
+
+
+spring:
+  application:
+    name: gualimall-geteway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: gualimall-coupon
+        file-extension: properties
+    gateway:
+      routes:
+      - id: host_route
+        uri: http://www.baidu.com
+        predicates:
+        - Host=**.baidu.com,**.bai
+      - id: query_route
+        uri: http://qq.com
+        predicates:
+          - Query=url,qq
