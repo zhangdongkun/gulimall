@@ -1,5 +1,6 @@
 package io.renren;
 
+import io.jsonwebtoken.Claims;
 import io.renren.modules.app.utils.JwtUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,7 @@ public class JwtTest {
         String token = jwtUtils.generateToken(1);
 
         System.out.println(token);
+        Claims c = jwtUtils.getClaimByToken(token);
     }
 
 }

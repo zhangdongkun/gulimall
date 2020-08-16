@@ -45,6 +45,7 @@ public class JwtUtils {
                 .setSubject(userId+"")
                 .setIssuedAt(nowDate)
                 .setExpiration(expireDate)
+                .setIssuer("zdk")
                 .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
