@@ -112,6 +112,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
     </dependencies>
 
 
@@ -129,7 +135,7 @@
         <module>gulimall-product</module>
         <module>gulimall-order</module>
         <module>gulimall-ware</module>
-
+        <module>xxl-job</module>
     </modules>
 
 

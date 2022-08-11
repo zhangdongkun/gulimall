@@ -14,3 +14,16 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yml
+    sentinel:
+      transport:
+        dashboard: localhost:7777
+      eager: true
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #MySQL配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.184.140:30336/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+

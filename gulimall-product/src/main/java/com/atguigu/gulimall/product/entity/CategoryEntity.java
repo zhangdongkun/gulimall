@@ -56,5 +56,4 @@ public class CategoryEntity implements Serializable {
 	 * 
 	 */
 	private Integer productCount;
-
 }
